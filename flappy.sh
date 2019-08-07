@@ -1,5 +1,5 @@
 #!/bin/bash
-set -x
+
 # cleaning up former runs
 rm *-results
 
