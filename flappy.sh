@@ -14,7 +14,7 @@ do
   do
     # This is what took me the most time, finding a way not to run out of forks, while keeping it performant.
     ((f=f%P)); ((f++==0)) && wait
-    # nc doesn't output normally, hence why we're sending everything to stdout. nor does it have timeouts built in so i put them in here to get performance.
+    # nc doesn't output normally, hence why we're sending everything to stdout.
     nc -z -G 1 $i $1 >> $i-results 2>&1 &
   done
 done
